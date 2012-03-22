@@ -3,7 +3,6 @@
 import os
 
 from setuptools import setup, find_packages
-import versiontools_support
 
 setup(
     name = 'PyChef',
@@ -30,6 +29,9 @@ setup(
         'Programming Language :: Python',
     ],
     zip_safe = False,
+    setup_requires = [
+        'versiontools >= 1.8',
+    ],
     tests_require = ['unittest2'],
     test_suite = 'unittest2.collector',
 )
